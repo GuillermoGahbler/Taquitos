@@ -1,0 +1,30 @@
+
+<div class="bg-black" id="notDevoured">
+    {{#each tacos}}
+        {{#unless this.devoured}}
+            <p class="bg-blue">{{this.taco_name}}</p>
+        <button>Devour it!</button>
+        {{/unless}}
+    {{/each}}
+</div>
+
+
+<div class="bg-brown" id="devoured">
+    {{#each tacos}}
+        {{#if this.devoured}}
+            <p class="bg-red">{{this.taco_name}}</p>
+        {{/if}}
+    {{/each}}
+</div>
+
+
+    <form action="">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <label for="">Add a new Taco you'd like to eat.</label>
+    </form>
+
+
+
+
+
+

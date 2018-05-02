@@ -3,7 +3,7 @@ create database tacos_db;
 use tacos_db;
 
 create table tacos (
-id int auto_increment,
+id auto_increment,
 taco_name varchar(50) not null,
 devoured boolean default false,
 primary key(id)

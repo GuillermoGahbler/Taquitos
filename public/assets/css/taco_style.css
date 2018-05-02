@@ -1,0 +1,19 @@
+.bg-red {
+    background-color: red;
+    color: white;
+}
+
+.bg-blue {
+    background-color: blue;
+    color:white;
+}
+
+.bg-brown {
+    background-color: brown;
+    padding: 5px;
+}
+
+.bg-black {
+    background-color: black;
+    padding: 5px;
+}
