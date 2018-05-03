@@ -1,3 +1,16 @@
+.clearfix:after { 
+    content:"";
+    display: table;
+    clear: both;
+    }
+    
+
+body{
+    background-color: gold;
+    
+}
+
+ 
 .bg-red {
     background-color: red;
     color: white;
@@ -11,9 +24,17 @@
 .bg-brown {
     background-color: brown;
     padding: 5px;
+    width: 300px;
+    float: left;
 }
 
 .bg-black {
     background-color: black;
     padding: 5px;
+    width: 300px;
+    float: left;
+}
+
+img{
+    float: left;
 }
