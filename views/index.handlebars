@@ -1,33 +1,54 @@
-<div class="clearfix"> 
+<div class="clear margin2">
+    <div id="not_consumed" class="bg-brown container float-left">
+       
+       {{#each tacos}}
+       {{#unless this.devoured}}
+      <p>
+          <span class="id">{{this.id}}.</span>
+          <span class="taco_name">{{this.taco_name}}</span>
+          <button class="consumeTaco" type="submit">Submit </button>
 
-<div class="bg-black" id="notDevoured">
-    {{#each tacos}}
-        {{#unless this.devoured}}
-            <p class="bg-blue">{{this.taco_name}}</p>
-        <button>Devour it!</button>
-        {{/unless}}
-    {{/each}}
-</div>
 
-<img src="/assets/img/taco.png" width="400px" id="yummy_taco">
+      </p> 
+       {{/unless}}
+       
+       {{/each}}
+    </div>
 
-<div class="bg-brown" id="devoured">
-    {{#each tacos}}
-        {{#if this.devoured}}
-            <p class="bg-red">{{this.taco_name}}</p>
-        {{/if}}
-    {{/each}}
-</div>
-
-</div>
-
-<div>
-    <form action="">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <label for="">Add a new Taco you'd like to eat.</label>
-    </form>
+<div class="taco_img float-left">
+    <img src="assets/img/taco.png" alt="tacos">
 </div>
 
 
+    <div id="consumed" class="bg-black container float-right">
+        {{#each tacos}}
+       {{#if this.devoured}}
+       <p class="center-content">
+           {{this.taco_name}}
+       consumed
+       </p>
+       {{/if}}
+       
+       {{/each}}
+    </div>
+</div>
+
+<form action="" class="center-content">
+
+<textarea name="taco_name" id="taco_name" cols="30" rows="10"></textarea>
+
+<button type="submit" class="block center-content" id="new_taco">Submit new Taco</button>
+
+<label for="taco_name" class="block">
+    enter a taco you'd like to eat and click submit button
+     </label>
+
+</form>
 
 
+
+{{!-- 
+<form class="center-content">
+       <input type="text" value={{this.taco_name}} readonly ="true" name="taco_name">
+       <button type="submit" class="consumeTaco">Eat Taco</button>
+       </form> --}}

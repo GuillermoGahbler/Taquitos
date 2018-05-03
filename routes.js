@@ -12,25 +12,11 @@ router.get("/", (req, res, next) => {
     
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+router.put("/:id",(req,res,next)=>{
+ tacos_controller.updateOne(req.params.id)   
+ .then(()=>res.redirect("/"))
+ .catch(err => console.log(err))
+})
 
 
 

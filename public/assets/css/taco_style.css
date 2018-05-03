@@ -1,16 +1,13 @@
-.clearfix:after { 
-    content:"";
+.clear:after {
+    content: "";
     display: table;
     clear: both;
-    }
-    
-
-body{
-    background-color: gold;
-    
 }
 
- 
+body {
+    background-color: gold;
+}
+
 .bg-red {
     background-color: red;
     color: white;
@@ -18,11 +15,12 @@ body{
 
 .bg-blue {
     background-color: blue;
-    color:white;
+    color: white;
 }
 
 .bg-brown {
     background-color: brown;
+    color: white;
     padding: 5px;
     width: 300px;
     float: left;
@@ -30,11 +28,43 @@ body{
 
 .bg-black {
     background-color: black;
+    color: white;
     padding: 5px;
     width: 300px;
     float: left;
 }
 
-img{
+.container {
+    width: 30%;
+}
+
+.float-left {
     float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.center-content {
+    text-align: center;
+    margin: 0% auto;
+}
+
+ 
+.block {
+    display: block;
+}
+
+.marging2{
+    margin-bottom:2%;
+}
+
+img{
+    width: 100%;
+    padding-left: 40px;
+}
+
+.taco_img {
+    width: 30%;
 }

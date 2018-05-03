@@ -23,6 +23,12 @@ module.exports = {
 
 
     insertOne: () => "",
-    updateOne: () => ""
+    updateOne: (id) => {
+        const statement = `select * FROM ${tableName}`;
+        return queryDB(statement)
+            .then(results => results)
+            .catch(err => console.log(err))
+
+    }
 
 }
