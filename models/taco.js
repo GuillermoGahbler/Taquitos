@@ -6,7 +6,7 @@ var taco = {
             cb(res);
         });
     },
-    insertOne: function(cols, vals, cd) {
+    insertOne: function(cols, vals,cb) {
         orm.insertOne('tacos', cols, vals, function (res){
             cb(res);
         });
