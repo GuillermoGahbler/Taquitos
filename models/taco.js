@@ -1,7 +1,24 @@
-const orm = require('../config/orm');
+const orm = require('../config/orm.js');
+
+var taco = {
+    selectAll: function(cb) {
+        orm.selectAll('tacos', function(res){
+            cb(res);
+        });
+    },
+    insertOne: function(cols, vals, cd) {
+        orm.insertOne('tacos', cols, vals, function (res){
+            cb(res);
+        });
+    },
+    updateOne: function (objColVals, condition,cb){
+        orm.updateOne('tacos', objColVals, condition, function(res){
+            cb(res);
+        });
+    }
+
+};
+
+module.exports = taco;
 
  
-module.exports = {
-    all:()=>orm.selectAll("tacos"),
-    updateOne:(id)=>orm.updateOne(id)
-};

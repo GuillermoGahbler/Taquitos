@@ -1,54 +1,44 @@
-<div class="clear margin2">
-    <div id="not_consumed" class="bg-brown container float-left">
-       
-       {{#each tacos}}
-       {{#unless this.devoured}}
-      <p>
-          <span class="id">{{this.id}}.</span>
-          <span class="taco_name">{{this.taco_name}}</span>
-          <button class="consumeTaco" type="submit">Submit </button>
+<h1>Eat Fresh Tacos!</h1>
 
-
-      </p> 
-       {{/unless}}
-       
-       {{/each}}
-    </div>
-
-<div class="taco_img float-left">
-    <img src="assets/img/taco.png" alt="tacos">
-</div>
-
-
-    <div id="consumed" class="bg-black container float-right">
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col s6">
         {{#each tacos}}
-       {{#if this.devoured}}
-       <p class="center-content">
-           {{this.taco_name}}
-       consumed
-       </p>
-       {{/if}}
-       
-       {{/each}}
+          {{#unless this.devoured}}
+            <div>
+              <form action="/tacos/{{this.id}}?_method=PUT" method="POST">
+                <button type="submit" class='tacoAvailable'> {{this.taco_name}}</button>
+              </form>
+            </div>
+          {{/unless}}
+        {{/each}}
+      </div>
+
+      <div class="col s6">
+        {{#each tacos}}
+          {{#if this.devoured}}
+            <div class='tacoEaten'>
+              <div>
+                {{this.taco_name}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
     </div>
+  </div>
+</main>
+
+<h2>Add A Taco Option</h2>
+  <div>
+       <form action="tacos/" method="POST">
+        <input type="text" id="name" name="taco_name" placeholder="Add some yummy Tacos!">
+        <button type="submit" class="addTacoButton">Add The Taco</button>
+      </form>
+   </div>
+    
+  </div>
 </div>
 
-<form action="" class="center-content">
-
-<textarea name="taco_name" id="taco_name" cols="30" rows="10"></textarea>
-
-<button type="submit" class="block center-content" id="new_taco">Submit new Taco</button>
-
-<label for="taco_name" class="block">
-    enter a taco you'd like to eat and click submit button
-     </label>
-
-</form>
-
-
-
-{{!-- 
-<form class="center-content">
-       <input type="text" value={{this.taco_name}} readonly ="true" name="taco_name">
-       <button type="submit" class="consumeTaco">Eat Taco</button>
-       </form> --}}
+ 

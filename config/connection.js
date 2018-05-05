@@ -1,21 +1,41 @@
-var mysql = require('mysql');
- 
-var PORT = process.env.PORT || 8080;
-
-var connection = mysql.createConnection({
+const mysql = require('mysql');
+const PORT = process.env.PORT || 3000;
+const connection = mysql.createConnection({
+	 
     host: "localhost",
     user: "root",
     password: "root",
-    database: "tacos_db"
-
+		database: "tacos_db",
+		// port: "3306"
+		 
+	});
+ 
+connection.connect(function(err) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(connection.threadId);
 });
+
+ 
+module.exports = connection;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
   
-
-
- 
-module.exports = connection;

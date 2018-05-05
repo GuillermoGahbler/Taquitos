@@ -1,0 +1,69 @@
+ 
+body {
+    
+    background-color: gold;
+}
+
+#yummy_taco {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 65px;
+    margin: 50px;
+    color: black;
+}
+
+.tacoAvailable {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    color: black;
+}
+ 
+.tacoEaten {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    background-color: grey;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    margin: 50px;
+}
+
+.addTacoButton {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    font-display: solid;
+    text-align: center;
+    border-radius: 25px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border: none;
+     
+}
+
+.TacoFooter {
+    padding: 20px 0;
+}
+
+ 
